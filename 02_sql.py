@@ -1,13 +1,15 @@
-
+#insert records into population table of database
 import sqlite3
 
 conn=sqlite3.connect("new.db")
 
 cursor=conn.cursor()
+try:
+	cursor.execute("""INSERT INTO population VALUES('New York City','NY',8400000)""")
+	cursor.execute("""INSERT INTO population VALUES('San Francisco', 'CA', 800000)""")
 
-cursor.execute("""INSERT INTO population VALUES('New York City','NY',8400000)""")
-cursor.execute("""INSERT INTO population VALUES('San Francisco', 'CA', 800000)""")
-
-conn.commit()
+	conn.commit()
+except sqlite3.OperationalError:
+	print("Oops! Something went wrong. try again..")
 conn.close()
 

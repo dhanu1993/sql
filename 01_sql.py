@@ -1,3 +1,4 @@
+#create population table in database
 import sqlite3
 
 conn=sqlite3.connect("new.db")
