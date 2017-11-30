@@ -22,7 +22,6 @@ with sqlite3.connect("cars.db") as connection:
 # 	for row in cursor.execute("SELECT * FROM inventory"):
 # 		print(row)
 
-
 ########   assignment 3   #######
 # with sqlite3.connect("cars.db") as connection:
 # 	cursor=connection.cursor()
